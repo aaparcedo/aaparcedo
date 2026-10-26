@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Source for banner.png. Render: Chrome headless, 1280x400 at device scale 2. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@600&family=JetBrains+Mono:wght@600&display=block" rel="stylesheet">
+<style>
+  :root {
+    --field: #0A0A0F; --surface: #0F0F16; --phosphor: #FFB547; --accent: #FFAB2E;
+    --confirm: #00FFAB; --gold: #C9A84C; --muted: #B07A35;
+  }
+  html, body { margin: 0; width: 1280px; height: 400px; background: var(--field); overflow: hidden; }
+  .frame { position: absolute; inset: 18px; border: 1px solid rgba(201,168,76,.35); }
+  .corner { position: absolute; width: 26px; height: 26px; border-color: var(--gold); border-style: solid; }
+  .tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; } .tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; }
+  .bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; } .br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
+  svg.rays { position: absolute; inset: 0; }
+  .scan { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,181,71,.035) 0 1px, transparent 1px 4px); }
+  .title {
+    position: absolute; left: 0; right: 0; top: 104px; text-align: center;
+    font-family: 'Bebas Neue'; font-size: 112px; letter-spacing: .12em; padding-left: .12em; color: var(--phosphor);
+    text-shadow: 0 0 12px rgba(255,171,46,.65), 0 0 38px rgba(255,140,0,.35);
+  }
+  .rule { position: absolute; top: 248px; left: 330px; right: 330px; height: 1px; background: var(--gold); opacity: .8; }
+  .diamond { position: absolute; top: 243px; left: 635px; width: 10px; height: 10px; transform: rotate(45deg); border: 1px solid var(--gold); background: var(--field); }
+  .sub {
+    position: absolute; left: 0; right: 0; top: 270px; text-align: center;
+    font-family: 'Chakra Petch'; font-weight: 600; font-size: 17px; letter-spacing: .26em; color: var(--accent);
+  }
+  .chip { position: absolute; font-family: 'JetBrains Mono'; font-weight: 600; font-size: 13px; letter-spacing: .08em; color: var(--muted); }
+  .chip b { color: var(--phosphor); font-weight: 600; }
+  .chip .ok { color: var(--confirm); }
+  .c1 { top: 38px; left: 46px; } .c2 { top: 38px; right: 46px; text-align: right; }
+  .c3 { bottom: 38px; left: 46px; } .c4 { bottom: 38px; right: 46px; text-align: right; }
+  .hatch { position: absolute; left: 46px; right: 46px; height: 6px; top: 66px;
+    background: repeating-linear-gradient(-45deg, rgba(201,168,76,.55) 0 6px, transparent 6px 14px); opacity: .5; }
+</style>
+</head>
+<body>
+  <svg class="rays" viewBox="0 0 1280 400" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#C9A84C" stroke-opacity=".13" stroke-width="1">
+      <line x1="640" y1="560" x2="-200" y2="0"/><line x1="640" y1="560" x2="0" y2="0"/><line x1="640" y1="560" x2="180" y2="0"/>
+      <line x1="640" y1="560" x2="340" y2="0"/><line x1="640" y1="560" x2="480" y2="0"/><line x1="640" y1="560" x2="600" y2="0"/>
+      <line x1="640" y1="560" x2="680" y2="0"/><line x1="640" y1="560" x2="800" y2="0"/><line x1="640" y1="560" x2="940" y2="0"/>
+      <line x1="640" y1="560" x2="1100" y2="0"/><line x1="640" y1="560" x2="1280" y2="0"/><line x1="640" y1="560" x2="1480" y2="0"/>
+    </g>
+    <g fill="none" stroke="#C9A84C">
+      <circle cx="640" cy="560" r="250" stroke-opacity=".18"/>
+      <circle cx="640" cy="560" r="300" stroke-opacity=".1" stroke-dasharray="2 6"/>
+      <path d="M 452 395 A 250 250 0 0 1 560 323" stroke="#FF8C00" stroke-opacity=".7" stroke-width="2"/>
+    </g>
+  </svg>
+  <div class="scan"></div>
+  <div class="frame"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hatch"></div>
+  <div class="chip c1">UNIT <b>AAPARCEDO</b></div>
+  <div class="chip c2">STATUS <span class="ok">● BUILDING</span></div>
+  <div class="chip c3">ORLANDO <b>→</b> NEW YORK</div>
+  <div class="chip c4">UCF M.S. '26 · BLOOMBERG '27</div>
+  <div class="title">ALEJANDRO APARCEDO</div>
+  <div class="rule"></div><div class="diamond"></div>
+  <div class="sub">COMPUTER VISION · SOFTWARE ENGINEERING · SYSTEMS</div>
+</body>
+</html>
